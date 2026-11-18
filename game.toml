@@ -1,0 +1,54 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "NascarRumble"
+id = "SLUS-01068"
+players = 2
+exe = "disc/SLUS_010.68"
+disc = "C:/Users/Admin/Downloads/NASCAR Rumble (USA)/NASCAR Rumble (USA).cue"
+load_address = "0x80010000"
+entry_pc = "0x800A5440"
+text_size = "0x0009F800"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "NASCAR Rumble (USA).bin"
+cue_name = "NASCAR Rumble (USA).cue"
+boot_exe = "SLUS_010.68"
+known_sizes = [261248400]
+known_md5 = [
+  "6f9c58f84a36c9698de94d7bd5a1278d",
+]
+known_sha1 = [
+  "3e43fedad31a67400808e816ed28a52fb6ec0381",
+]
+known_crc32 = [
+  "5442f359",
+]
+
+[recompiler]
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+window_title = "NascarRumble Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 1
+required_disc_fp = "db26e52c14ef02a63fc63aa07778c5664454c045d43fbea19003f9c905867edb"
