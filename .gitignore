@@ -90,3 +90,9 @@ starvation_dump.jsonl
 !/disc_probe.*.json
 !/disc_set.json
 !/.recomp.json
+
+# Codigo C gerado a partir do executavel do jogo: cada usuario gera localmente com o proprio disco.
+/generated/
+/toolchain/
+run.err
+aot-work/

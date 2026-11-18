@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=NascarRumble
+Exec=NascarRumble_Recompiled
+Icon=nascarrumble
+Categories=Game;
+Terminal=false
